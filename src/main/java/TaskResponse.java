@@ -1,4 +1,4 @@
-package com.chebh.enterprisetaskapi.dto;
+package com.example.enterprise_task_Api;
 
 import java.time.LocalDateTime;
 
@@ -11,7 +11,6 @@ public class TaskResponse {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    // Constructor
     public TaskResponse(Long id, String title, String description, boolean completed,
                         LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
@@ -23,27 +22,10 @@ public class TaskResponse {
     }
 
     // Getters
-    public Long getId() {
-        return id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public boolean isCompleted() {
-        return completed;
-    }
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public LocalDateTime getUpdatedAt() {
-        return updatedAt;
-    }
+    public Long getId() { return id; }
+    public String getTitle() { return title; }
+    public String getDescription() { return description; }
+    public boolean isCompleted() { return completed; }
+    public LocalDateTime getCreatedAt() { return createdAt; }
+    public LocalDateTime getUpdatedAt() { return updatedAt; }
 }

@@ -1,6 +1,5 @@
-package com.chebh.enterprisetaskapi.repository;
+package com.example.enterprise_task_Api;
 
-import com.chebh.enterprisetaskapi.model.Task;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
