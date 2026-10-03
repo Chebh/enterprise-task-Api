@@ -25,6 +25,10 @@ public class Task {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;   // ← New field
+
     @PrePersist
     protected void onCreate() {
         createdAt = LocalDateTime.now();
@@ -39,10 +43,12 @@ public class Task {
     // Constructors
     public Task() {}
 
-    public Task(String title, String description) {
-        this.title = title;
-        this.description = description;
-    }
+    // Getters and Setters (keep existing ones + add these)
+    public User getUser() { return user; }
+    public void setUser(User user) { this.user = user; }
+
+    // ... keep all your previous getters and setters
+
 
     // Getters and Setters
     public Long getId() { return id; }

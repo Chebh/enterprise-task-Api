@@ -1,35 +1,27 @@
 # Enterprise Task API
 
-A clean, enterprise-style Task Management REST API built with **Java 25** and **Spring Boot**.
+Secure Task Management REST API built with Java 25, Spring Boot, PostgreSQL & JWT.
 
 ## Features
-- Full CRUD operations for Tasks
-- Proper layered architecture (Controller → Service → Repository)
-- DTOs for request/response
-- Input validation
-- Global exception handling
-- H2 in-memory database (easy to switch to PostgreSQL later)
-- Automatic timestamps
+- JWT Authentication (Register / Login)
+- Task Ownership (users only see their own tasks)
+- Full CRUD
+- Validation + Global Exception Handling
+- PostgreSQL
+- Docker ready
 
-## Tech Stack
-- Java 25
-- Spring Boot 4.x
-- Spring Data JPA
-- H2 Database
-- Maven
-- Validation
+## Auth Endpoints
+- POST `/api/auth/register`
+- POST `/api/auth/login`
 
-## API Endpoints
+## Protected Task Endpoints
+All require header: `Authorization: Bearer <token>`
 
-| Method | Endpoint              | Description          |
-|--------|-----------------------|----------------------|
-| POST   | `/api/tasks`          | Create a new task    |
-| GET    | `/api/tasks`          | Get all tasks        |
-| GET    | `/api/tasks/{id}`     | Get task by ID       |
-| PUT    | `/api/tasks/{id}`     | Update a task        |
-| DELETE | `/api/tasks/{id}`     | Delete a task        |
+- POST   `/api/tasks`
+- GET    `/api/tasks`
+- GET    `/api/tasks/{id}`
+- PUT    `/api/tasks/{id}`
+- DELETE `/api/tasks/{id}`
 
-## How to Run
-
-```bash
-./mvnw spring-boot:run
+## Author
+Brian Njuguna
