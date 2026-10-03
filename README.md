@@ -1,27 +1,24 @@
 # Enterprise Task API
 
-Secure Task Management REST API built with Java 25, Spring Boot, PostgreSQL & JWT.
+Production-style Task Management API with JWT Authentication, PostgreSQL, and Task Ownership.
 
 ## Features
 - JWT Authentication (Register / Login)
-- Task Ownership (users only see their own tasks)
+- Task Ownership (users only manage their own tasks)
 - Full CRUD
 - Validation + Global Exception Handling
+- Swagger Documentation
+- Docker + docker-compose support
 - PostgreSQL
-- Docker ready
 
-## Auth Endpoints
-- POST `/api/auth/register`
-- POST `/api/auth/login`
+## Tech Stack
+Java 25 • Spring Boot • Spring Security • JWT • PostgreSQL • Maven • Docker
 
-## Protected Task Endpoints
-All require header: `Authorization: Bearer <token>`
-
-- POST   `/api/tasks`
-- GET    `/api/tasks`
-- GET    `/api/tasks/{id}`
-- PUT    `/api/tasks/{id}`
-- DELETE `/api/tasks/{id}`
+## Quick Start
+1. Update database credentials in `application.properties`
+2. Run: `./mvnw spring-boot:run`
+3. Open Swagger: http://localhost:8080/swagger-ui.html
 
 ## Author
-Brian Njuguna
+**Brian Njuguna**  
+LinkedIn: [brian-njuguna-434223199](https://www.linkedin.com/in/brian-njuguna-434223199)

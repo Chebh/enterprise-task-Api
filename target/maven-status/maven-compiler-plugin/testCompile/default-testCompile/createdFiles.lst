@@ -1,1 +1,3 @@
 com\example\enterprise_task_Api\EnterpriseTaskApiApplicationTests.class
+com\example\enterprise_task_Api\TaskServiceTest.class
+com\example\enterprise_task_Api\TaskControllerTest.class

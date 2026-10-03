@@ -33,6 +33,11 @@ public class TaskController {
         return ResponseEntity.ok(taskService.getTaskById(id));
     }
 
+    @GetMapping("/api/health")
+public ResponseEntity<String> health() {
+    return ResponseEntity.ok("API is running");
+}
+
     @PutMapping("/{id}")
     public ResponseEntity<TaskResponse> updateTask(@PathVariable Long id,
                                                    @Valid @RequestBody TaskRequest request) {
