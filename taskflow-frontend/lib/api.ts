@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://enterprise-task-api-production.up.railway.app";
 
 export async function register(fullName: string, email: string, password: string) {
   const res = await fetch(`${API_URL}/api/auth/register`, {
